@@ -7,14 +7,14 @@ import { CiMobile3 } from "react-icons/ci";
 // import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const [dropDown, setDropDown] = useState(true);
-  const [dropDown2, setDropDown2] = useState(true);
+  const [dropDown, setDropDown] = useState(false);
+  const [dropDown2, setDropDown2] = useState(false);
 
   return (
-    <>
+    <div>
       <div className="navbar_container">
         <div className="logo">
-          <img src="https://www.meesho.com/assets/svgicons/meeshoLogo.svg" />
+          <img src="https://www.meesho.com/assets/svgicons/meeshoLogo.svg" className="img_logo" />
         </div>
         <div className="search_input">
           <GoSearch className="search_icon" />
@@ -116,10 +116,11 @@ const Navbar = () => {
           </li>
 
           <li
-           onMouseEnter={() => setDropDown2(true)}
-           onMouseLeave={() => setDropDown2(false)}
-          >Women Western
-          {dropDown2 ? (
+            onMouseEnter={() => setDropDown2(true)}
+            onMouseLeave={() => setDropDown2(false)}
+          >
+            Women Western
+            {dropDown2 ? (
               <div
                 className="product"
                 onMouseEnter={() => setDropDown2(true)}
@@ -191,8 +192,6 @@ const Navbar = () => {
             ) : (
               " "
             )}
-            
-            
           </li>
           <li>Men</li>
           <li>Kids</li>
@@ -203,7 +202,7 @@ const Navbar = () => {
           <li>Electronics</li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
