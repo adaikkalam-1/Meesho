@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import Products from './Pages/Products/Products'
+import Cart from './Pages/Cart/Cart'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar/>
       <Routes>
        <Route path='/' element={<Products/>}/>
+       <Route path="/cart" element={<Cart/>}/>
       </Routes>
       
     </div>
